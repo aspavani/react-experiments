@@ -8,24 +8,17 @@ const itasks = JSON.parse(localStorage.getItem('tasks')) || [];
 function reducer(tasks, action) {   
     switch(action.type) {
         case "ADD_TODO":
-            console.log("Here2");
-
             if(!action.inputTask) {return tasks;}
             return ([...tasks, { taskName: action.inputTask, completed: false }]);
 
         case "REMOVE_TODO":
-            console.log("Here_remove");
             const newtasks = [...tasks];
             newtasks.splice(action.index, 1);
             return newtasks;
 
         case "TOGGLE_TODO":
             const newTasks = [...tasks];
-            console.log("Here1");
             newTasks[action.index].completed = !newTasks[action.index].completed;
-            console.log(newTasks);
-            console.log("index is " + action.index);
-            console.log(`completd state of newTasks[${action.index}] is ${newTasks[action.index].completed}`);
             return newTasks;
 
         case "RESET_TODOS":
@@ -47,7 +40,7 @@ function ToDoList2() {
 
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
-    }, [tasks]);
+    }, [...tasks]);
 
     const handleAdd = () => {
         dispatch({type:"ADD_TODO", inputTask:input});
@@ -62,7 +55,6 @@ function ToDoList2() {
     }
 
     const handleToggle = (index) => {
-        console.log("here");
         dispatch({type:"TOGGLE_TODO", index:index});
         
     }
