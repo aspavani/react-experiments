@@ -44,6 +44,8 @@ function ToDoList2() {
 
     const handleAdd = () => {
         dispatch({type:"ADD_TODO", inputTask:input});
+        setInput(" ");
+
     }
 
     const handleRemove = (index) => {
