@@ -4,6 +4,7 @@ import ToDo from './Todo.js';
 import ToDoList1 from './ToDoList1.js';
 import ToDoList2 from './ToDoList2.js';
 import NavbarCarouselBS from './NavbarCarouselBS';
+import Jeopardy from './components/jeopardy/Jeopardy.js';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <ToDoList1 /> */}
       {/* <PavaniToDoList /> */}
       {/* <ToDoList2 /> */}
-      <NavbarCarouselBS text1="GoNutz" text2="Home"/>
+      {/* <NavbarCarouselBS text1="GoNutz" text2="Home"/> */}
+      <Jeopardy />
     </>
   );
     
