@@ -34,13 +34,13 @@ function ToDoList2() {
     const [tasks, dispatch] = useReducer(reducer, itasks);
     const [input, setInput] = useState("");
 
-    // useEffect(() => {
-    //     localStorage.setItem('tasks', JSON.stringify(tasks));
-    // });
-
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
-    }, [...tasks]);
+    });
+
+    // useEffect(() => {
+    //     localStorage.setItem('tasks', JSON.stringify(tasks));
+    // }, [...tasks]);
 
     const handleAdd = () => {
         dispatch({type:"ADD_TODO", inputTask:input});
