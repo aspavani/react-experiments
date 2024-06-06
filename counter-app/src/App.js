@@ -3,6 +3,7 @@ import SignUpForm from './SignUpForm.js';
 import ToDo from './Todo.js';
 import ToDoList1 from './ToDoList1.js';
 import ToDoList2 from './ToDoList2.js';
+import NavbarCarouselBS from './NavbarCarouselBS';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <SignUpForm /> */}
       {/* <ToDoList1 /> */}
       {/* <PavaniToDoList /> */}
-      <ToDoList2 />
+      {/* <ToDoList2 /> */}
+      <NavbarCarouselBS text1="GoNutz" text2="Home"/>
     </>
   );
     

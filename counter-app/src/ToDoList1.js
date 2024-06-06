@@ -16,7 +16,8 @@ function ToDoList1() {
         console.log(tasks);
         if (!input) return;
 
-        setTasks([...tasks, { taskName: input, completed: false }])
+        setTasks([...tasks, { taskName: input, completed: false }]);
+        setInput(" ");
     }
 
     const handleRemove = (index) => {
